@@ -7,7 +7,7 @@
     <application
 		android:name="NgnApplication"
 		android:label="@string/app_name">
-	<string name="doubango_revision">1309</string>
+
 	<service android:name="NgnNativeService"/>
 	
     </application>
