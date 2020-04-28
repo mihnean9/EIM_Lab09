@@ -3,38 +3,51 @@ apply plugin: 'com.android.library'
 buildscript {
     repositories {
         mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.+'
+        classpath 'com.android.tools.build:gradle:3.5.3'
+    }
+}
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: '*.jar')
+    implementation fileTree(include: '*.jar', dir: 'libs')
 }
 
 android {
-   compileSdkVersion 25
+   compileSdkVersion 24
    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 11
-    }
+        minSdkVersion 24
+        targetSdkVersion 24
 
-    productFlavors {
-        // NDK integration deprecated
-        /*x86 {
-            ndk {
-                abiFilter "x86"
+        /*externalNativeBuild {
+            cmake {
+                cFlags "-D_EXAMPLE_C_FLAG1", "-D_EXAMPLE_C_FLAG2"
+                cppFlags "-D__STDC_FORMAT_MACROS"
             }
         }
-        arm {
-            ndk {
-                abiFilters "armeabi-v7a", "armeabi"
-            }
+        ndk {
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a'
         }*/
     }
+
+    /*externalNativeBuild {
+        cmake {
+            path "../../doubango/CMakeLists.txt"
+        }
+    }*/
 
     sourceSets {
         main {
@@ -60,6 +73,4 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
-
-    useLibrary 'org.apache.http.legacy'
 }

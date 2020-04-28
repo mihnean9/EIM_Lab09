@@ -107,7 +107,7 @@ public class NgnEngine {
 				Log.d(TAG,"CPU_Feature="+AndroidUtils.getCpuFeatures());
 				if(NgnApplication.isCpuNeon()){
 					Log.d(TAG,"isCpuNeon()=YES");
-					System.loadLibrary("tinyWRAP");
+					System.loadLibrary("tinyWRAP_neon");
 				}
 				else{
 					Log.d(TAG,"isCpuNeon()=NO");
@@ -206,7 +206,7 @@ public class NgnEngine {
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_theora, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h263, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h261, prio++);
-        
+
         // Profile
         MediaSessionMgr.defaultsSetProfile(tmedia_profile_t.valueOf(configurationService.getString(
 				NgnConfigurationEntry.MEDIA_PROFILE,
