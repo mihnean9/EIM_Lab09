@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NgnSip.iml" filepath="$PROJECT_DIR$/NgnSip.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android-ngn-stack/android-ngn-stack.iml" filepath="$PROJECT_DIR$/android-ngn-stack/android-ngn-stack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-ngn-stack/NgnSip.android-ngn-stack.iml" filepath="$PROJECT_DIR$/.idea/modules/android-ngn-stack/NgnSip.android-ngn-stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NgnSip.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NgnSip.app.iml" />
     </modules>
   </component>
 </project>
